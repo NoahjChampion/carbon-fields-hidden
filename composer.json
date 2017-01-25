@@ -1,0 +1,23 @@
+{
+  "name": "schrapel/carbon-fields-hidden",
+  "type": "wordpress-plugin",
+  "license": "MIT",
+  "description": "Extends the base Carbon Fields with a Hidden field.",
+  "homepage": "https://github.com/schrapel/carbon-fields-hidden",
+  "authors": [
+    {
+      "name": "Toby Schrapel",
+      "email": "toby@tobyschrapel.com",
+      "homepage": "https://github.com/schrapel"
+    }
+  ],
+  "keywords": [
+    "wordpress", "wp"
+  ],
+  "support": {
+    "issues": "https://github.com/schrapel/carbon-fields-hidden"
+  },
+  "require": {
+    "php": ">=5.4.0"
+  }
+}
