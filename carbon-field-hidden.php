@@ -4,7 +4,7 @@
  * Plugin Name: Carbon Field: Hidden
  * Plugin URI:  https://github.com/schrapel/carbon-fields-hidden
  * Description: Extends the base Carbon Fields with a Hidden field.
- * Version:     1.0.0
+ * Version:     1.0.1
  * Author:      Toby Schrapel
  * Author URI:  https://tobyschrapel.com/
  * License:     GPL-2.0+

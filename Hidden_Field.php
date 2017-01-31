@@ -4,15 +4,22 @@ namespace Carbon_Fields\Field;
 
 class Hidden_Field extends Field
 {
+    public $html;
+
     /**
      * Returns data
      *
      * @param bool $load Should the value be loaded from the database or use the value from the current instance.
      * @return array
      */
-    public function to_json($load)
-    {
-        return parent::to_json($load);
+    function to_json($load) {
+        $data = parent::to_json($load);
+
+        $data = array_merge($data, array(
+            'html' => $this->html,
+        ));
+
+        return $data;
     }
 
     /**
@@ -24,18 +31,20 @@ class Hidden_Field extends Field
     {
         ?>
         <input id="{{{ id }}}" type="hidden" name="{{{ name }}}" value="{{ value }}" class="regular-text"/>
+        {{{ html }}}
         <?php
     }
 
     /**
-     * Enqueues admin scripts
+     * Set a html notice
+     *
+     * @param $html
+     * @return $this
      */
-    public static function admin_enqueue_scripts()
+    function set_html($html)
     {
-        $dir = plugin_dir_url(__FILE__);
-
-        # Enqueue CSS
-        wp_enqueue_style('carbon-field-Hidden', $dir . 'css/field.css');
+        $this->html = $html;
+        return $this;
     }
 
     function get_label() {
